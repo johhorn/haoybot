@@ -10,9 +10,9 @@
 
 module.exports = (robot) ->
 
-  # robot.hear /badger/i, (res) ->
-  #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
-  #
+  robot.hear /ost/i, (res) ->
+     res.send "Elsker ostepop"
+
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
   #   if doorType is "pod bay"
@@ -32,14 +32,14 @@ module.exports = (robot) ->
   #   res.send "#{res.message.text}? That's a Paddlin'"
   #
   #
-  enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
-  leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
+  enterReplies = ['Hei', 'Det er meg', 'Heeheheh', 'Hei min venn.', 'Hvordan har du det?', 'Jeg kan se deg']
+  leaveReplies = ['Er du her fortsatt?', 'Mistet deg :(', 'Søker']
 
-   robot.enter (res) ->
-     res.send res.random enterReplies
-   robot.leave (res) ->
-     res.send res.random leaveReplies
-  
+  robot.enter (res) ->
+    res.send res.random enterReplies
+  robot.leave (res) ->
+    res.send res.random leaveReplies
+
   # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
   #
   # robot.respond /what is the answer to the ultimate question of life/, (res) ->
