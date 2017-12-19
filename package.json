@@ -5,6 +5,7 @@
   "author": "Johanne",
   "description": "Familieboten for St. Jørgens vei 1",
   "dependencies": {
+    "@slack/client": "^3.14.2",
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-help": "^0.2.0",
